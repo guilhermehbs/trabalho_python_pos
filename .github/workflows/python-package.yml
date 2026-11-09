@@ -1,7 +1,7 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+# Valida o projeto a cada push ou pull request na main:
+# confere a sintaxe, roda o pipeline completo e verifica se as saídas foram geradas.
 
-name: Python package
+name: Validar projeto
 
 on:
   push:
@@ -10,28 +10,51 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  validar:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.11"]
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+
+    - name: Configurar Python 3.11
+      uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
+        python-version: "3.11"
+        cache: pip
+
+    - name: Instalar dependências
       run: |
         python -m pip install --upgrade pip
         python -m pip install flake8
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
+        pip install -r requirements.txt
+
+    - name: Checar sintaxe com flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        # falha se houver erro de sintaxe ou nome indefinido
+        flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
+        # estilo só como aviso, não derruba o job
+        flake8 src --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Conferir arquivos de entrega
+      run: |
+        test -s README.md
+        test -s requirements.txt
+        test -s relatorio.pdf
+
+    - name: Rodar pipeline completo
+      run: python src/main.py
+
+    - name: Conferir saídas geradas
+      run: |
+        test -s data/processed/pedidos_limpo.csv
+        test -s data/processed/itens_limpo.csv
+        test -s reports/resultados_eda.txt
+        test "$(ls reports/figures/*.png | wc -l)" -eq 5
+
+    - name: Guardar resultados
+      uses: actions/upload-artifact@v4
+      with:
+        name: resultados
+        path: |
+          reports/
+          data/processed/
