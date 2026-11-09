@@ -1,0 +1,8 @@
+tabela,linhas,colunas,colunas_com_nulos,total_nulos,duplicatas_linha,duplicatas_chave,colunas_tipo_inadequado
+clientes,99441,5,0,0,0,0,0
+pedidos,99441,8,3,4908,0,0,5
+itens,112650,7,0,0,0,0,1
+pagamentos,103886,5,0,0,0,0,0
+avaliacoes,99224,7,2,145903,0,814,2
+produtos,32951,9,8,2448,0,0,0
+traducao_categorias,71,2,0,0,0,0,0

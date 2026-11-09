@@ -1,0 +1,9 @@
+coluna,tipo_inferido,tipo_esperado,inadequado,tabela
+order_purchase_timestamp,str,datetime64,True,pedidos
+order_approved_at,str,datetime64,True,pedidos
+order_delivered_carrier_date,str,datetime64,True,pedidos
+order_delivered_customer_date,str,datetime64,True,pedidos
+order_estimated_delivery_date,str,datetime64,True,pedidos
+shipping_limit_date,str,datetime64,True,itens
+review_creation_date,str,datetime64,True,avaliacoes
+review_answer_timestamp,str,datetime64,True,avaliacoes

@@ -1,0 +1,141 @@
+=== P1 - resumo ===
+mes_inicial: 2017-01
+mes_final: 2018-08
+n_meses: 20
+crescimento_receita_pct: 650.08
+tendencia_receita_por_mes: 41641.189
+receita_jan_ago_2017: 2993456.13
+receita_jan_ago_2018: 7218125.12
+crescimento_yoy_receita_pct: 141.13
+crescimento_yoy_pedidos_pct: 139.945
+receita_nov_2017: 987765.37
+alta_nov_2017_vs_out_pct: 52.375
+mes_pico: 2017-11
+receita_pico: 987765.37
+ticket_medio_geral: 137.042
+ticket_mediano_geral: 86.575
+
+=== P1 - serie mensal ===
+         n_pedidos    receita  ticket_medio  var_receita_pct
+ano_mes                                                     
+2017-01        750  111798.36        149.06              NaN
+2017-02       1653  234223.40        141.70           109.51
+2017-03       2546  359198.85        141.08            53.36
+2017-04       2303  340669.68        147.92            -5.16
+2017-05       3546  489338.25        138.00            43.64
+2017-06       3135  421923.37        134.58           -13.78
+2017-07       3872  481604.52        124.38            14.15
+2017-08       4193  554699.70        132.29            15.18
+2017-09       4150  607399.67        146.36             9.50
+2017-10       4478  648247.65        144.76             6.73
+2017-11       7289  987765.37        135.51            52.37
+2017-12       5513  726033.19        131.69           -26.50
+2018-01       7069  924645.00        130.80            27.36
+2018-02       6555  826437.13        126.08           -10.62
+2018-03       7003  953356.25        136.14            15.36
+2018-04       6798  973534.09        143.21             2.12
+2018-05       6749  977544.69        144.84             0.41
+2018-06       6099  856077.86        140.36           -12.43
+2018-07       6159  867953.46        140.92             1.39
+2018-08       6351  838576.64        132.04            -3.38
+
+=== P2 - resumo ===
+n_categorias: 74
+n_categorias_80pct: 18
+pct_categorias_80pct: 24.324
+top1: health_beauty
+top1_pct: 9.327
+top5_pct: 39.831
+categoria_preco_medio_mais_alto: computers
+
+=== P2 - top 15 categorias ===
+                          receita  n_itens  preco_medio  preco_mediano  pct_receita  pct_acumulado
+categoria                                                                                         
+health_beauty          1233131.72     9465       130.28          79.90         9.33           9.33
+watches_gifts          1166176.98     5859       199.04         128.99         8.82          18.15
+bed_bath_table         1023434.76    10953        93.44          79.05         7.74          25.89
+sports_leisure          954852.55     8431       113.25          77.90         7.22          33.11
+computers_accessories   888724.61     7644       116.26          81.99         6.72          39.83
+furniture_decor         711927.69     8160        87.25          65.49         5.38          45.22
+housewares              615628.69     6795        90.60          59.70         4.66          49.87
+cool_stuff              610204.10     3718       164.12         129.90         4.62          54.49
+auto                    578966.65     4140       139.85          84.90         4.38          58.87
+toys                    471286.48     4030       116.94          79.90         3.56          62.43
+garden_tools            470495.28     4268       110.24          59.90         3.56          65.99
+baby                    400421.84     2982       134.28          77.98         3.03          69.02
+perfumery               390144.65     3340       116.81          84.99         2.95          71.97
+telephony               309860.23     4430        69.95          29.99         2.34          74.31
+office_furniture        268154.31     1668       160.76         144.94         2.03          76.34
+
+=== P3 - resumo ===
+n_pedidos: 95824
+pct_pedidos_atrasados: 7.995
+nota_media_geral: 4.156
+spearman_atraso_nota: -0.176
+
+=== P3 - faixas de atraso ===
+                   n_pedidos  nota_media  pct_notas_baixas
+faixa_atraso                                              
+No prazo ou antes      88163        4.29              9.22
+1 a 3 dias              2636        3.77             19.12
+4 a 7 dias              1773        2.32             61.31
+Mais de 7 dias          3252        1.73             78.44
+
+=== P4 - resumo ===
+n_estados: 24
+estado_mais_rapido: SP
+dias_mais_rapido: 8.761
+estado_mais_lento: AM
+dias_mais_lento: 26.426
+estado_frete_mais_caro: RO
+frete_mais_caro: 38.52
+estado_frete_mais_barato: SP
+frete_mais_barato: 13.61
+pearson_dias_frete: 0.739
+pct_pedidos_sp: 41.976
+
+=== P4 - estados ===
+                n_pedidos  dias_entrega_medio  frete_mediano  pct_atraso
+customer_state                                                          
+SP                  40494                8.76          13.61        5.89
+PR                   4923               11.99          17.88        5.00
+MG                  11354               12.01          18.19        5.61
+DF                   2080               12.97          18.09        7.07
+SC                   3546               14.95          18.23        9.76
+RS                   5344               15.30          18.23        7.15
+RJ                  12350               15.31          17.98       13.47
+GO                   1957               15.61          18.52        8.18
+MS                    701               15.62          18.62       11.55
+ES                   1995               15.79          18.28       12.23
+TO                    274               17.66          34.28       12.77
+MT                    886               18.06          23.28        6.77
+PE                   1593               18.45          27.78       10.80
+RN                    474               19.28          35.02       10.76
+BA                   3256               19.34          22.07       14.04
+RO                    243               19.37          38.52        2.88
+PI                    476               19.46          34.30       15.97
+PB                    517               20.43          36.43       11.03
+CE                   1279               21.27          27.69       15.32
+SE                    335               21.52          31.98       15.22
+MA                    717               21.57          35.46       19.67
+PA                    946               23.77          29.00       12.37
+AL                    397               24.54          34.15       23.93
+AM                    145               26.43          27.31        4.14
+
+=== Outliers - preco ===
+q1: 39.9
+q3: 134.9
+limite_inferior: -102.6
+limite_superior: 277.4
+n_outliers: 8427
+pct_outliers: 7.48
+maximo: 6735.0
+
+=== Outliers - frete ===
+q1: 13.08
+q3: 21.15
+limite_inferior: 0.975
+limite_superior: 33.255
+n_outliers: 12134
+pct_outliers: 10.77
+maximo: 409.68

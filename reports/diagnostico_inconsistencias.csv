@@ -1,0 +1,9 @@
+,ocorrencias
+pedidos_entregues_sem_data_de_entrega,8
+entrega_antes_da_compra,0
+itens_com_preco_nao_positivo,0
+pagamentos_com_valor_zero,9
+pagamentos_tipo_not_defined,3
+pedidos_com_mais_de_uma_avaliacao,547
+outliers_preco_iqr,8427
+outliers_frete_iqr,12134
